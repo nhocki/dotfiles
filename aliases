@@ -31,14 +31,6 @@ alias gba="git branch -a"
 alias gci="git pull --rebase && rake && git push"
 alias gitk='gitk --all'
 
-alias rs='rails server'
-alias rc='rails console'
-alias rg='rails generate'
-
-alias ss='ruby script/server'
-alias sg='ruby script/generate'
-alias sc='ruby script/console'
-
 alias show_dot_files='defaults write com.apple.finder AppleShowAllFiles TRUE'
 alias hide_dot_files='defaults write com.apple.finder AppleShowAllFiles FALSE'
 alias turn_animation_off='defaults write com.apple.dock workspaces-swoosh-animation-off -bool YES && killall Dock'

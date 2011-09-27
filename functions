@@ -1,0 +1,35 @@
+function rs {
+  if [ -e script/rails ]; then
+    script/rails server $@
+  else
+    script/server $@
+  fi
+}
+
+function rc {
+  if [ -e script/rails ]; then
+    script/rails console $@
+  else
+    script/console $@
+  fi
+}
+
+function rg {
+  if [ -e script/rails ]; then
+    script/rails generate $@
+  else
+    script/generate $@
+  fi
+}
+
+function rake {
+  if [ -e Gemfile ]; then
+    bundle exec rake $@
+  else
+    command rake $@
+  fi
+}
+
+function :w {
+  print 'This is not vim'
+}

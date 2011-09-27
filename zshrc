@@ -71,4 +71,10 @@ if [ -e "$HOME/.prompt" ]; then
   source "$HOME/.prompt"
 fi
 
+# functions
+if [ -e "$HOME/.functions" ]; then
+  source "$HOME/.functions"
+fi
+
+
 export PATH="$HOME/.rvm/bin:$PATH"

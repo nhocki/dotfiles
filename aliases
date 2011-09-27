@@ -6,7 +6,6 @@ alias s="bundle exec rspec"
 alias cuc="bundle exec cucumber"
 alias gi="gem install"
 alias giv="gem install -v"
-alias gci="git pull --rebase && rake && git push"
 alias tlf="tail -f"
 alias b="bundle"
 alias be="bundle exec"
@@ -21,3 +20,12 @@ alias -g G='| grep'
 alias -g M='| less'
 alias -g L='| wc -l'
 alias -g ONE="| awk '{ print \$1}'"
+
+alias reload!='source ~/.zshrc'
+
+alias gb="git branch"
+alias gc="git commit -av"
+alias gst="git status -sb"
+alias gco="git checkout"
+alias gba="git branch -a"
+alias gci="git pull --rebase && rake && git push"

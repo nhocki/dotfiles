@@ -9,17 +9,10 @@ compinit
 setopt auto_cd
 
 # use vim as an editor
-export EDITOR=vim
-
-# aliases
-if [ -e "$HOME/.aliases" ]; then
-  source "$HOME/.aliases"
-fi
+export EDITOR=emacs
 
 # vi mode
-bindkey -v
-bindkey "^F" vi-cmd-mode
-bindkey jj vi-cmd-mode
+bindkey -e
 
 # use incremental search
 bindkey "^R" history-incremental-search-backward
@@ -27,6 +20,11 @@ bindkey "^R" history-incremental-search-backward
 # add some readline keys back
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
+
+# add some emacs key shortcuts
+bindkey "^K" kill-line
+bindkey "^Z" undo
+bindkey "^E" emacs-forward-word
 
 # handy keybindings
 bindkey "^P" history-search-backward
@@ -38,7 +36,7 @@ bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 setopt prompt_subst
 
 # prompt
-export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
+# export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
 
 # ignore duplicate history entries
 setopt histignoredups
@@ -63,3 +61,15 @@ setopt CORRECT CORRECT_ALL
 
 # Enable extended globbing
 setopt EXTENDED_GLOB
+
+# aliases
+if [ -e "$HOME/.aliases" ]; then
+  source "$HOME/.aliases"
+fi
+
+# prompt
+if [ -e "$HOME/.prompt" ]; then
+  source "$HOME/.prompt"
+fi
+
+export PATH="$HOME/.rvm/bin:$PATH"

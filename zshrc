@@ -24,7 +24,6 @@ bindkey "^E" end-of-line
 # add some emacs key shortcuts
 bindkey "^K" kill-line
 bindkey "^Z" undo
-bindkey "^E" emacs-forward-word
 
 # handy keybindings
 bindkey "^P" history-search-backward

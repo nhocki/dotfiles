@@ -8,7 +8,16 @@ git_prompt_info() {
 
 # adds the current ruby version in red
 ruby_prompt_info() {
-  echo "[%{$fg_bold[red]%}$(rvm-prompt)%{$reset_color%}]"
+  echo "[%{$fg_bold[red]%}$(rvm-prompt i v p g)%{$reset_color%}]"
+}
+
+# this tests for the presence of rvm 
+# if its loaded, it'll add the prompt
+function rvm_info_for_prompt {
+  ruby_version=$(~/.rvm/bin/rvm-prompt)
+  if [ -n "$ruby_version" ]; then
+    echo "[%{$fg_bold[red]%}$ruby_version]%{$reset_color%}"
+  fi
 }
 
 
@@ -23,5 +32,5 @@ export CLICOLOR=1
 setopt prompt_subst
 
 # prompt
-export PS1='$(ruby_prompt_info)$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
+export PS1='$(rvm_info_for_prompt)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}]$(git_prompt_info) '
 

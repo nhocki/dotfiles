@@ -11,7 +11,7 @@ setopt auto_cd
 # use vim as an editor
 export EDITOR=emacs
 
-# vi mode
+# emacs mode
 bindkey -e
 
 # use incremental search
@@ -63,19 +63,16 @@ if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
 fi
 
-# prompt
-if [ -e "$HOME/.prompt" ]; then
-  source "$HOME/.prompt"
-fi
-
 # functions
 if [ -e "$HOME/.functions" ]; then
   source "$HOME/.functions"
 fi
 
 # RVM
-if [ -e "$HOME/.rvm" ]; then
-  export PATH="$HOME/.rvm/bin:$PATH"
-  source "$HOME/.rvm/scripts/rvm"
-fi
+setopt nullglob
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# prompt
+if [ -e "$HOME/.prompt" ]; then
+  source "$HOME/.prompt"
+fi

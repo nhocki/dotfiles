@@ -76,5 +76,9 @@ if [ -e "$HOME/.functions" ]; then
   source "$HOME/.functions"
 fi
 
+# RVM
+if [ -e "$HOME/.rvm" ]; then
+  export PATH="$HOME/.rvm/bin:$PATH"
+  source "$HOME/.rvm/scripts/rvm"
+fi
 
-export PATH="$HOME/.rvm/bin:$PATH"

@@ -76,3 +76,7 @@ setopt nullglob
 if [ -e "$HOME/.prompt" ]; then
   source "$HOME/.prompt"
 fi
+
+# Homebrew path fix
+# run brew doctor for help
+export PATH="/usr/local/bin:$PATH"

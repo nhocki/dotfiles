@@ -30,6 +30,7 @@ alias gco="git checkout"
 alias gba="git branch -a"
 alias gci="git pull --rebase && rake && git push"
 alias gitk='gitk --all'
+alias comcount='git shortlog -sn'
 
 alias show_dot_files='defaults write com.apple.finder AppleShowAllFiles TRUE'
 alias hide_dot_files='defaults write com.apple.finder AppleShowAllFiles FALSE'
@@ -39,3 +40,14 @@ alias turn_animation_on='defaults write com.apple.dock workspaces-swoosh-animati
 alias c='cd ~/code/'
 alias u='cd ~/university/current/'
 alias z='cd ~/zinergia/'
+
+
+# Removes all the ugly files
+alias rmb='echo -n "Really clean this directory? [y/n] ";
+read yorn;
+if test "$yorn" = "y"; then
+  rm -f \#* *~ .*~;
+  echo "Cleaned";
+else
+  echo "Not Cleaned";
+fi'

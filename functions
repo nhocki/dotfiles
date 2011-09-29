@@ -33,3 +33,27 @@ function rake {
 function :w {
   print 'This is not vim'
 }
+
+
+# Opens a new terminal tab in the same working directory
+function open_tab {
+  osascript -e "
+  tell application \"System Events\" to tell process \"Terminal\" to keystroke \"t\" using command down
+  tell application \"Terminal\" to do script \"cd '$PWD' \" in selected tab of the front window    "
+}
+
+# Open as many new tabs as you want
+# USAGE: nt 4 (will open 4 terminal tabs)
+# If no argument is given, it will open one new terminal tab
+function nt () {
+  i=0;
+  if [[ ! -z "$@" ]]
+    then
+    while [ $i -lt $1 ]; do
+      open_tab
+      let i+=1;
+    done
+  else
+    open_tab
+  fi
+}

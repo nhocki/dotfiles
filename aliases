@@ -24,7 +24,8 @@ alias -g ONE="| awk '{ print \$1}'"
 alias reload!='source ~/.zshrc'
 
 alias gb="git branch"
-alias gc="git commit -av"
+alias gcv="git commit -av"
+alias gcm="git commit -am"
 alias gst="git status -sb"
 alias gco="git checkout"
 alias gba="git branch -a"

@@ -80,3 +80,4 @@ fi
 # Homebrew path fix
 # run brew doctor for help
 export PATH="/usr/local/bin:$PATH"
+export PUSHER_SECRET_KEY="bd744207b2068fb6abd6"

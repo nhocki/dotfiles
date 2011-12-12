@@ -64,8 +64,8 @@ if [ -e "$HOME/.aliases" ]; then
 fi
 
 # functions
-if [ -e "$HOME/.functions" ]; then
-  source "$HOME/.functions"
+if [ -e "$HOME/.functions/functions" ]; then
+  source "$HOME/.functions/functions"
 fi
 
 # RVM

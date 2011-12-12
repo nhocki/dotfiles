@@ -1,3 +1,10 @@
+if [ -e "$HOME/.functions/z.sh" ]; then
+  . "$HOME/.functions/z.sh"
+  function precmd () {
+    _z --add "$(pwd -P)"
+  }
+fi
+
 function rs {
   if [ -e script/rails ]; then
     script/rails server $@

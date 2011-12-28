@@ -64,3 +64,10 @@ function nt () {
     open_tab
   fi
 }
+
+# Create a web server from the current directory
+# usage: server <port>
+#        # => server 8080
+function server() {
+  open "http://localhost:${1}" && python -m SimpleHTTPServer $1
+}

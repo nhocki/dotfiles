@@ -71,3 +71,5 @@ function nt () {
 function server() {
   open "http://localhost:${1}" && python -m SimpleHTTPServer $1
 }
+
+function git(){hub "$@"}

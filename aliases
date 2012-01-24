@@ -25,6 +25,8 @@ alias reload!='source ~/.zshrc'
 
 alias gb="git branch"
 alias gp="git push"
+alias gl="git lg"
+alias gpl="git pull"
 alias gcv="git commit -av"
 alias gcm="git commit -am"
 alias gst="git status -sb"

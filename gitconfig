@@ -2,7 +2,7 @@
   name = Nicolás Hock Isaza
   email = nhocki@gmail.com
 [color]
-  ui = auto
+  ui = true
 [color "branch"]
   current = yellow reverse
   local = yellow
@@ -29,16 +29,21 @@
   br = branch
   co = checkout
   df = diff
-  lg = log -p
+  lgp = log -p
   count = shortlog -sn
   today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lg = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(red) %an, %Cblue%ar%Creset'
   lol = log --pretty=oneline --abbrev-commit --graph --decorate
   new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
   last = log -n 1 --pretty=format:'%cr' --date=relative
   unstage = reset HEAD
 [apply]
   whitespace = nowarn
+[help]
+  autocorrect = 1
+[status]
+  submodule = 1
 [core]
   excludesfile =  /Users/norris/.gitignore
   editor = mate -w

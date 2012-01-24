@@ -41,6 +41,7 @@ alias turn_animation_on='defaults write com.apple.dock workspaces-swoosh-animati
 
 alias c='cd ~/code/'
 alias u='cd ~/university/current/'
+alias zin='cd ~/zinergia/'
 
 # Removes all the ugly files
 alias rmb='echo -n "Really clean this directory? [y/n] ";

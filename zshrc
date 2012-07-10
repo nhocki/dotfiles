@@ -81,4 +81,5 @@ fi
 # run brew doctor for help
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/share/python:$PATH"
 export EDITOR="$HOME/bin/mate -w"
-export PUSHER_SECRET_KEY="bd744207b2068fb6abd6"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

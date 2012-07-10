@@ -1,6 +1,8 @@
 [user]
   name = Nicolás Hock Isaza
   email = nhocki@gmail.com
+[credential]
+  helper = osxkeychain
 [color]
   ui = true
 [color "branch"]
@@ -49,6 +51,8 @@
   editor = mate -w
 [rebase]
   autosquash = true
+[mergetool]
+  keepBackup = false
 [branch "master"]
-	remote = origin
-	merge = refs/heads/master
+  remote = origin
+  merge = refs/heads/master

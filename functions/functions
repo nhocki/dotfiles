@@ -37,10 +37,6 @@ function rake {
   fi
 }
 
-function :w {
-  print 'This is not vim'
-}
-
 
 # Opens a new terminal tab in the same working directory
 function open_tab {

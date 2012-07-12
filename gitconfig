@@ -2,7 +2,7 @@
   name = Nicolás Hock Isaza
   email = nhocki@gmail.com
 [credential]
-  helper = osxkeychain
+	helper = cache
 [color]
   ui = true
 [color "branch"]
@@ -38,7 +38,7 @@
   l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(red) %an, %Cblue%ar%Creset'
   lol = log --pretty=oneline --abbrev-commit --graph --decorate
   new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
-  last = log -n 1 --pretty=format:'%cr' --date=relative
+  last = log -n 1 --pretty=format:'%h - %cr' --date=relative
   unstage = reset HEAD
 [apply]
   whitespace = nowarn

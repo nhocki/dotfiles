@@ -2,7 +2,7 @@
 git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null)
   if [[ -n $ref ]]; then
-    echo "[%{$fg_bold[green]%}${ref#refs/heads/}%{$reset_color%}]"
+    echo "[%{$fg_bold[green]%}${ref#refs/heads/}%{$reset_color%}$(dirty_git)]"
   fi
 }
 
@@ -20,6 +20,11 @@ function rvm_info_for_prompt {
   fi
 }
 
+function dirty_git {
+  if [[ $(git diff --shortstat 2> /dev/null | tail -n1) != "" ]]; then
+    echo "*"
+  fi
+}
 
 # makes color constants available
 autoload -U colors

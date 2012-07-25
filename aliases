@@ -28,11 +28,6 @@ alias gadd="git add"
 alias gitk='gitk --all'
 alias comcount='git shortlog -sn'
 
-alias show_dot_files='defaults write com.apple.finder AppleShowAllFiles TRUE'
-alias hide_dot_files='defaults write com.apple.finder AppleShowAllFiles FALSE'
-alias turn_animation_off='defaults write com.apple.dock workspaces-swoosh-animation-off -bool YES && killall Dock'
-alias turn_animation_on='defaults write com.apple.dock workspaces-swoosh-animation-off -bool NO && killall Dock'
-
 alias c='cd ~/code/'
 alias u='cd ~/university/current/'
 alias zin='cd ~/zinergia/'
@@ -46,3 +41,11 @@ if test "$yorn" = "y"; then
 else
   echo "Not Cleaned";
 fi'
+
+# Mac stuff
+alias show_dot_files='defaults write com.apple.finder AppleShowAllFiles TRUE'
+alias hide_dot_files='defaults write com.apple.finder AppleShowAllFiles FALSE'
+alias turn_animation_off='defaults write com.apple.dock workspaces-swoosh-animation-off -bool YES && killall Dock'
+alias turn_animation_on='defaults write com.apple.dock workspaces-swoosh-animation-off -bool NO && killall Dock'
+alias show_spotlight_icon='sudo chmod 755 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search && killall SystemUIServer'
+alias hide_spotlight_icon='sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search && killall SystemUIServer'

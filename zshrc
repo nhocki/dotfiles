@@ -79,7 +79,6 @@ fi
 
 # Homebrew path fix
 # run brew doctor for help
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/share/python:$PATH"
+export PATH="/Applications/Xcode.app/Contents/Developer/usr/bin:$HOME/bin:/usr/local/bin:/usr/local/share/python:$PATH"
 export EDITOR="$HOME/bin/mate -w"
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

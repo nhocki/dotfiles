@@ -1,18 +1,12 @@
-alias gi="gem install"
-alias giv="gem install -v"
-alias tlf="tail -f"
-alias b="bundle"
 alias be="bundle exec"
 alias ln='ln -v'
 alias mkdir='mkdir -p'
 alias ...='../..'
-alias l='ls'
-alias ll='ls -al'
-alias lh='ls -Alh'
+alias l='ls -h'
 
 alias reload!='source ~/.zshrc'
 
-alias g="git"
+alias git="hub"
 alias gb="git branch"
 alias gp="git push"
 alias glg="git lg"
@@ -23,7 +17,6 @@ alias gcm="git commit -am"
 alias gst="git status -sb"
 alias gco="git checkout"
 alias gba="git branch -a"
-alias gci="git pull --rebase && rake && git push"
 alias gadd="git add"
 alias gitk='gitk --all'
 alias comcount='git shortlog -sn'

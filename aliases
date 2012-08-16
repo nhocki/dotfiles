@@ -1,3 +1,4 @@
+alias e='subl -n .'
 alias be="bundle exec"
 alias ln='ln -v'
 alias mkdir='mkdir -p'

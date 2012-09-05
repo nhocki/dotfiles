@@ -2,7 +2,7 @@
   name = Nicolás Hock Isaza
   email = nhocki@gmail.com
 [credential]
-	helper = cache
+	helper = osxkeychain
 [color]
   ui = true
 [color "branch"]

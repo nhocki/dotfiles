@@ -7,6 +7,7 @@ alias l='ls -h'
 
 alias reload!='source ~/.zshrc'
 
+alias h='heroku'
 alias git="hub"
 alias gb="git branch"
 alias gp="git push"

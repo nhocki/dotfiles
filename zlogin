@@ -20,3 +20,6 @@ setopt prompt_subst
 if [ -e "$HOME/.prompt" ]; then
   source "$HOME/.prompt"
 fi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

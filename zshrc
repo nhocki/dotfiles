@@ -81,4 +81,6 @@ fi
 # run brew doctor for help
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/share/python:$PATH"
 export EDITOR="/usr/bin/subl -n"
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH="/usr/local/heroku/bin:/usr/texbin:$PATH"

@@ -8,11 +8,14 @@ alias l='ls -h'
 alias reload!='source ~/.zshrc'
 
 alias h='heroku'
+alias b='bundle'
+alias g='git'
+
 alias git="hub"
 alias gb="git branch"
 alias gp="git push"
 alias glg="git lg"
-alias gpl="git pull"
+alias gpl="git pull --rebase"
 alias gdf="git diff"
 alias gcv="git commit -av"
 alias gcm="git commit -am"
@@ -22,6 +25,9 @@ alias gba="git branch -a"
 alias gadd="git add"
 alias gitk='gitk --all'
 alias comcount='git shortlog -sn'
+
+alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias pgstop='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop'
 
 alias c='cd ~/code/'
 alias u='cd ~/university/current/'

@@ -11,7 +11,7 @@ ruby_prompt_info() {
   echo "[%{$fg_bold[red]%}$(rvm-prompt i v p g)%{$reset_color%}]"
 }
 
-# this tests for the presence of rvm 
+# this tests for the presence of rvm
 # if its loaded, it'll add the prompt
 function rvm_info_for_prompt {
   ruby_version=$(~/.rvm/bin/rvm-prompt)
@@ -37,5 +37,7 @@ export CLICOLOR=1
 setopt prompt_subst
 
 # prompt
-export PS1='$(rvm_info_for_prompt)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}]$(git_prompt_info) '
+export PS1='[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}]$(git_prompt_info) '
+export RPS1='$(rvm_info_for_prompt)'
+
 

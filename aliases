@@ -13,6 +13,7 @@ alias g='git'
 
 alias git="hub"
 alias gb="git branch"
+alias gc="git commit"
 alias gp="git push"
 alias glg="git lg"
 alias gpl="git pull --rebase"

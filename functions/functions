@@ -67,3 +67,15 @@ function nt () {
 function server() {
   open "http://localhost:${1}" && python -m SimpleHTTPServer $1
 }
+
+
+function pr() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null)
+  if [[ -n $ref ]]; then
+    `git pull-request -h $1:${ref#refs/heads/}`
+  fi
+}
+
+function clg(){
+  `gb --merge master | grep -v master | xargs git branch -d`
+}

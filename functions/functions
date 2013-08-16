@@ -80,7 +80,7 @@ function server() {
 function pr() {
   ref=$(git symbolic-ref HEAD 2> /dev/null)
   if [[ -n $ref ]]; then
-    `git pull-request -h $1:${ref#refs/heads/}`
+    echo `git pull-request -h $1:${ref#refs/heads/}`
   fi
 }
 

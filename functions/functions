@@ -6,7 +6,9 @@ if [ -e "$HOME/.functions/z.sh" ]; then
 fi
 
 function rs {
-  if [ -e script/rails ]; then
+  if [ -e bin/rails ]; then
+    bin/rails server $@
+  elif [ -e script/rails ]; then
     script/rails server $@
   else
     script/server $@
@@ -16,6 +18,8 @@ function rs {
 function rc {
   if [ -e script/rails ]; then
     script/rails console $@
+  elif [ -e bin/rails ]; then
+    bin/rails console $@
   else
     script/console $@
   fi
@@ -24,13 +28,17 @@ function rc {
 function rg {
   if [ -e script/rails ]; then
     script/rails generate $@
+  elif [ -e bin/rails ]; then
+    bin/rails generate $@
   else
     script/generate $@
   fi
 }
 
 function rake {
-  if [ -e Gemfile ]; then
+  if [ -e bin/rake ]; then
+    bin/rake $@
+  elif [ -e Gemfile ]; then
     bundle exec rake $@
   else
     command rake $@

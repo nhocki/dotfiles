@@ -48,7 +48,7 @@
   submodule = 1
 [core]
   excludesfile =  /Users/norris/.gitignore
-	editor = emacs
+	editor = subl -n -w
 [rebase]
   autosquash = true
 [mergetool]
@@ -58,7 +58,7 @@
   merge = refs/heads/master
 [hub]
   protocol = https
-[heroku]
-	account = personal
 [github]
 	user = nhocki
+[heroku]
+	account = personal

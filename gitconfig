@@ -62,3 +62,5 @@
 	user = nhocki
 [heroku]
 	account = personal
+[merge]
+	tool = opendiff

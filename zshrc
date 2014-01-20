@@ -85,4 +85,8 @@ export EDITOR="~/bin/subl -n"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH="/usr/local/heroku/bin:/usr/texbin:$PATH"
+PATH="/Applications/Android Studio.app/sdk:$PATH" #Android SDK
+
+export ANDROID_HOME="/Applications/Android Studio.app/sdk"
+
 # export NODE_PATH=/usr/local/lib/node_modules

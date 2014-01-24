@@ -11,6 +11,7 @@ alias h='heroku'
 alias b='bundle'
 alias g='git'
 
+alias pr="hub pull-request"
 alias git="hub"
 alias gb="git branch"
 alias gc="git commit"

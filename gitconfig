@@ -2,7 +2,7 @@
   name = Nicolás Hock Isaza
   email = nhocki@gmail.com
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [color]
   ui = true
 [color "branch"]
@@ -37,7 +37,7 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(red) %an, %Cblue%ar%Creset'
   lol = log --pretty=oneline --abbrev-commit --graph --decorate
-  new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+  new = !sh -c 'git lg $1@{1}..$1@{0} "$@"'
   last = log -n 1 --pretty=format:'%h - %s - %cr' --date=relative --abbrev-commit
   unstage = reset HEAD
 [apply]
@@ -47,8 +47,8 @@
 [status]
   submodule = 1
 [core]
-  excludesfile =  /Users/norris/.gitignore
-	editor = subl -n -w
+  excludesfile =  /Users/dijkstra/.gitignore
+  editor = subl -n -w
 [rebase]
   autosquash = true
 [mergetool]
@@ -59,8 +59,6 @@
 [hub]
   protocol = https
 [github]
-	user = nhocki
-[heroku]
-	account = personal
+  user = nhocki
 [merge]
-	tool = opendiff
+  tool = opendiff

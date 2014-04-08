@@ -29,7 +29,7 @@ bindkey "^Z" undo
 bindkey "^P" history-search-backward
 bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
-bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
+# bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 
 # expand functions in the prompt
 setopt prompt_subst
@@ -83,10 +83,12 @@ export PATH="$HOME/bin:/usr/local/bin:/usr/local/share/python:$PATH"
 export PATH="$HOME/.cask/bin:$PATH"
 export EDITOR="~/bin/subl -n"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH="/usr/local/heroku/bin:/usr/texbin:$PATH"
 PATH="/Applications/Android Studio.app/sdk:$PATH" #Android SDK
 
 export ANDROID_HOME="/Applications/Android Studio.app/sdk"
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 # export NODE_PATH=/usr/local/lib/node_modules

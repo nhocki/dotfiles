@@ -10,6 +10,7 @@ alias reload!='source ~/.zshrc'
 alias h='heroku'
 alias b='bundle'
 alias g='git'
+alias chspecs='git status -sb | grep spec | cut -f 2 -d M  | xargs bundle exec rspec'
 
 alias pr="hub pull-request"
 alias git="hub"

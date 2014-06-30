@@ -87,3 +87,19 @@ function oldpr() {
 function clg(){
   `gb --merge master | grep -v master | xargs git branch -d`
 }
+
+function pr {
+  bopen=0
+  while getopts ":o" Option
+  do
+    case $Option in
+      o ) bopen=1 ;;
+    esac
+  done
+  echo $bopen
+  if [ $bopen -eq 1 ]; then
+    hub pull-request | open
+  else
+    hub pull-request
+  fi
+}

@@ -90,5 +90,6 @@ PATH="/Applications/Android Studio.app/sdk:$PATH" #Android SDK
 export ANDROID_HOME="/Applications/Android Studio.app/sdk"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
 
 # export NODE_PATH=/usr/local/lib/node_modules

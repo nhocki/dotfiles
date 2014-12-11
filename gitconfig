@@ -48,8 +48,9 @@
 [status]
   submodule = 1
 [core]
-  excludesfile =  /Users/dijkstra/.gitignore
+  excludesfile =  /Users/tarjan/.gitignore
   excludesfile = /opt/boxen/config/git/gitignore
+  autocrlf = true
   # editor = subl -n -w
 [rebase]
   autosquash = true

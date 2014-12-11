@@ -3,6 +3,7 @@
   email = nhocki@gmail.com
 [credential]
   helper = osxkeychain
+  helper = /opt/boxen/bin/boxen-git-credential
 [color]
   ui = true
 [color "branch"]
@@ -48,7 +49,8 @@
   submodule = 1
 [core]
   excludesfile =  /Users/dijkstra/.gitignore
-  editor = subl -n -w
+  excludesfile = /opt/boxen/config/git/gitignore
+  # editor = subl -n -w
 [rebase]
   autosquash = true
 [mergetool]

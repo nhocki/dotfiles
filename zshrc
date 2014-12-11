@@ -9,7 +9,7 @@ compinit
 setopt auto_cd
 
 # use vim as an editor
-# export EDITOR=emacs
+export EDITOR=emacs
 
 # emacs mode
 bindkey -e
@@ -77,19 +77,18 @@ if [ -e "$HOME/.prompt" ]; then
   source "$HOME/.prompt"
 fi
 
-# Homebrew path fix
-# run brew doctor for help
+# export EDITOR="~/bin/subl -n"
+
+# PATH stuff
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/share/python:$PATH"
 export PATH="$HOME/.cask/bin:$PATH"
-export EDITOR="~/bin/subl -n"
-
-# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH="/usr/local/heroku/bin:/usr/texbin:$PATH"
 PATH="/Applications/Android Studio.app/sdk:$PATH" #Android SDK
+source /opt/boxen/env.sh
 
 export ANDROID_HOME="/Applications/Android Studio.app/sdk"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
 
-# export NODE_PATH=/usr/local/lib/node_modules
+

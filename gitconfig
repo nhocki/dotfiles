@@ -50,7 +50,7 @@
 [core]
   excludesfile =  /Users/tarjan/.gitignore
   excludesfile = /opt/boxen/config/git/gitignore
-  autocrlf = true
+  autocrlf = false
   # editor = subl -n -w
 [rebase]
   autosquash = true

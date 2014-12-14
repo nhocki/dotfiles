@@ -130,7 +130,7 @@ function! NumberToggle()
   endif
 endfunction
 
-nnoremap <C-n> :call NumberToggle()<cr>
+nnoremap <C-m> :call NumberToggle()<cr>
 
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
@@ -158,12 +158,6 @@ map <Leader>ct :!ctags -R .<CR>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
-
-" Get off my lawn
-" nnoremap <Left> :echoe "Use h"<CR>
-" nnoremap <Right> :echoe "Use l"<CR>
-" nnoremap <Up> :echoe "Use k"<CR>
-" nnoremap <Down> :echoe "Use j"<CR>
 
 " vim-rspec mappings
 nnoremap <Leader>t :call RunCurrentSpecFile()<CR>

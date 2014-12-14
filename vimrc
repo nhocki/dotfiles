@@ -117,6 +117,20 @@ set colorcolumn=+1
 " Numbers
 set number
 set numberwidth=5
+set relativenumber
+
+function! NumberToggle()
+  if(&relativenumber==1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunction
+
+nnoremap <C-n> :call NumberToggle()<cr>
+
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
 
 " Tab completion
 " will insert tab at beginning of line,

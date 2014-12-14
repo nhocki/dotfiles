@@ -9,7 +9,7 @@ compinit
 setopt auto_cd
 
 # use vim as an editor
-export EDITOR=emacs
+export EDITOR=vim
 
 # emacs mode
 bindkey -e

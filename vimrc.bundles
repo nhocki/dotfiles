@@ -30,6 +30,7 @@ Plugin 'vim-scripts/ctags.vim'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/tComment'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'editorconfig/editorconfig-vim'
 
 
 if filereadable(expand("~/.vimrc.bundles.local"))

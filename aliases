@@ -48,6 +48,9 @@ else
   echo "Not Cleaned";
 fi'
 
+alias t=tmux
+alias ta='tmux a -t'
+
 # Mac stuff
 alias show_dot_files='defaults write com.apple.finder AppleShowAllFiles TRUE'
 alias hide_dot_files='defaults write com.apple.finder AppleShowAllFiles FALSE'

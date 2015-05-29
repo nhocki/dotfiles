@@ -26,6 +26,7 @@ alias gcm="git commit -am"
 alias gst="git status -sb"
 alias gco="git checkout"
 alias gba="git branch -a"
+alias gca="git commit --amend --no-edit"
 alias gadd="git add"
 alias gitk='gitk --all'
 alias comcount='git shortlog -sn'
@@ -53,6 +54,9 @@ alias ta='tmux a -t'
 alias tls='tmux ls'
 
 alias fs='forego start'
+
+alias octal='stat -f"%Lp --> %N"'
+alias compose='docker-compose'
 
 # Mac stuff
 alias show_dot_files='defaults write com.apple.finder AppleShowAllFiles TRUE'

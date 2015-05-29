@@ -19,6 +19,9 @@ set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 
+" enable copying to and from the mac clipboard
+set clipboard=unnamed
+
 " Make it easier to enter commands.
 map ; :
 noremap ;; ;

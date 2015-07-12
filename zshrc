@@ -87,7 +87,6 @@ export PATH="$HOME/bin:/usr/local/bin:/usr/local/share/python:$PATH"
 export PATH="$HOME/.cask/bin:$PATH"
 PATH="/usr/local/heroku/bin:/usr/texbin:$PATH"
 PATH="/Applications/Android Studio.app/sdk:$PATH" #Android SDK
-source /opt/boxen/env.sh
 
 export ANDROID_HOME="/Applications/Android Studio.app/sdk"
 export GOPATH=$HOME/go
@@ -101,3 +100,5 @@ export DOCKER_TLS_VERIFY=1
 
 # added by travis gem
 [ -f /Users/tarjan/.travis/travis.sh ] && source /Users/tarjan/.travis/travis.sh
+
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh

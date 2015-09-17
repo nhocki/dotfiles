@@ -1,5 +1,6 @@
 # load our own completion functions
 fpath=(~/.zsh/completion $fpath)
+fpath=(/opt/boxen/homebrew/share/zsh/site-functions $fpath)
 
 # completion
 autoload -U compinit

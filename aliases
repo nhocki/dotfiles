@@ -57,7 +57,11 @@ alias tls='tmux ls'
 alias fs='forego start'
 
 alias octal='stat -f"%Lp --> %N"'
-alias compose='docker-compose'
+
+# Docker
+alias d='docker'
+alias dc='docker-compose'
+alias dm='docker-machine'
 
 # Mac stuff
 alias show_dot_files='defaults write com.apple.finder AppleShowAllFiles TRUE'

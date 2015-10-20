@@ -1,9 +1,6 @@
 [user]
   name = Nicolás Hock Isaza
   email = nhocki@gmail.com
-[credential]
-  helper = osxkeychain
-  helper = /opt/boxen/bin/boxen-git-credential
 [color]
   ui = true
 [color "branch"]
@@ -60,12 +57,13 @@
   remote = origin
   merge = refs/heads/master
 [hub]
-  protocol = https
+	protocol = https
 [github]
   user = nhocki
 [merge]
   tool = opendiff
-[ghi]
-	token = !security find-internet-password -a nhocki -s github.com -l 'ghi token' -w
 [heroku]
 	account = ride
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential

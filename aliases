@@ -14,6 +14,7 @@ alias chspecs='git status -sb | grep spec | cut -f 2 -d M  | xargs bundle exec r
 
 alias pr="hub pull-request"
 alias git="hub"
+alias gf="git flow"
 alias gb="git branch"
 alias gc="git commit"
 alias gp="git push"
@@ -70,3 +71,6 @@ alias turn_animation_off='defaults write com.apple.dock workspaces-swoosh-animat
 alias turn_animation_on='defaults write com.apple.dock workspaces-swoosh-animation-off -bool NO && killall Dock'
 alias show_spotlight_icon='sudo chmod 755 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search && killall SystemUIServer'
 alias hide_spotlight_icon='sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search && killall SystemUIServer'
+
+# Ride Aliases
+alias t2='docker-compose -f ./trackii.yml'

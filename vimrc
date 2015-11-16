@@ -129,22 +129,23 @@ set number
 set numberwidth=5
 set relativenumber
 
-function! NumberToggle()
-  if(&relativenumber==1)
-    set number
-  else
-    set relativenumber
-  endif
-endfunction
+"function! NumberToggle()
+  "if(&relativenumber==1)
+    "set number
+  "else
+    "set relativenumber
+  "endif
+"endfunction
 
-nnoremap <C-m> :call NumberToggle()<cr>
+"nnoremap <C-m> :call NumberToggle()<cr>
 
-autocmd InsertEnter * :set number
-autocmd InsertLeave * :set relativenumber
+"autocmd InsertEnter * :set number
+"autocmd InsertLeave * :set relativenumber
 
 " Tab completion
 " will insert tab at beginning of line,
 " will use completion if not at beginning
+
 set wildmode=list:longest,list:full
 function! InsertTabWrapper()
     let col = col('.') - 1
@@ -190,6 +191,18 @@ nnoremap <C-l> <C-w>l
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers=['jscs']
+
+" Run Go Imports on save
+let g:go_fmt_command = "goimports"
 
 " Set spellfile to location that is guaranteed to exist, can be symlinked to
 " Dropbox or kept in Git and managed outside of thoughtbot/dotfiles using rcm.

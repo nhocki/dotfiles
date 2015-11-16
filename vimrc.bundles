@@ -36,6 +36,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'fatih/vim-go'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'bling/vim-airline'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local

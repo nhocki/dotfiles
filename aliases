@@ -74,4 +74,4 @@ alias show_spotlight_icon='sudo chmod 755 /System/Library/CoreServices/Search.bu
 alias hide_spotlight_icon='sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search && killall SystemUIServer'
 
 # Ride Aliases
-alias t2='docker-compose -f ./trackii.yml'
+alias t2='docker-compose -f ~/src/docker-ride/trackii.yml'

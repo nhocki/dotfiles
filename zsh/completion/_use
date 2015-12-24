@@ -1,0 +1,3 @@
+#compdef use
+
+_arguments "1: :(`docker-machine ls -q`)"

@@ -32,6 +32,7 @@
   lgp = log -p
   count = shortlog -sn
   today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
+  standup = log --since='2 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
   lg = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(red) %an, %Cblue%ar%Creset'
   lol = log --pretty=oneline --abbrev-commit --graph --decorate

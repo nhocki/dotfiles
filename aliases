@@ -75,3 +75,6 @@ alias hide_spotlight_icon='sudo chmod 600 /System/Library/CoreServices/Search.bu
 
 # Ride Aliases
 alias t2='docker-compose -f ~/src/docker-ride/trackii.yml'
+
+# Prettyfy JSON from clipboard
+alias jsonpp='pbpaste | json_pp | pbcopy'

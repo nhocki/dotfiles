@@ -1,6 +1,8 @@
 # load our own completion functions
 fpath=(~/.zsh/completion $fpath)
 fpath=(/opt/boxen/homebrew/share/zsh/site-functions $fpath)
+fpath=(/usr/localshare/zsh/site-functions $fpath)
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 # completion
 autoload -U compinit
@@ -92,12 +94,6 @@ PATH="/Applications/Android Studio.app/sdk:$PATH" #Android SDK
 export ANDROID_HOME="/Applications/Android Studio.app/sdk"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-
-export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2376
-export DOCKER_CERT_PATH=/Users/tarjan/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-
-
 
 # added by travis gem
 [ -f /Users/tarjan/.travis/travis.sh ] && source /Users/tarjan/.travis/travis.sh

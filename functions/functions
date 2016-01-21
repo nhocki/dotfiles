@@ -63,3 +63,8 @@ function oldpr() {
 use () {
   eval "$(docker-machine env $1)"
 }
+
+dmip () {
+  active=`docker-machine active`
+  docker-machine ip ${1:-$active}
+}

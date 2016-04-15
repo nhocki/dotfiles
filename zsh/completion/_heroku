@@ -31,6 +31,7 @@ _1st_arguments=(
   "domains\:add":"add a custom domain to an app"
   "domains\:remove":"remove a custom domain from an app"
   "domains\:clear":"remove all custom domains from an app"
+  "fork":"forks an application"
   "help":"list available commands or display help for a specific command"
   "keys":"display keys for the current user"
   "keys\:add":"add a key for the current user"

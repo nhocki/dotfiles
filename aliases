@@ -33,7 +33,7 @@ alias gitk='gitk --all'
 alias gpr='git push && hub pull-request'
 alias comcount='git shortlog -sn'
 alias gitclean='git branch --merge master | grep -v master | grep -v "*" | xargs git branch -d'
-alias gfclean='git branch --merge develop | grep -v develop | grep -v "*" | xargs git branch -d'
+alias gfclean='git branch --merge develop | grep -v master | grep -v develop | grep -v "*" | xargs git branch -d'
 alias gitfiles='git diff-tree --no-commit-id --name-only -r'
 
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'

@@ -39,6 +39,7 @@
   new = !sh -c 'git lg $1@{1}..$1@{0} "$@"'
   last = log -n 1 --pretty=format:'%h - %s - %cr' --date=relative --abbrev-commit
   unstage = reset HEAD
+  pr = !"pr() { git fetch origin pull/$1/head:pr-$1; git checkout pr-$1; }; pr"
 [apply]
   whitespace = nowarn
 [help]

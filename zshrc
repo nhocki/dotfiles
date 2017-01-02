@@ -78,6 +78,10 @@ fi
 setopt nullglob
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+if [ -e "$HOME/.zshenv" ]; then
+  source "$HOME/.zshenv"
+fi
+
 # prompt
 if [ -e "$HOME/.prompt" ]; then
   source "$HOME/.prompt"
@@ -86,10 +90,10 @@ fi
 # export EDITOR="~/bin/subl -n"
 
 # PATH stuff
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/share/python:$PATH"
+export PATH="$HOME/.rbenv/shims:$HOME/bin:/usr/local/bin:/usr/local/share/python:$PATH"
 export PATH="$HOME/.cask/bin:$PATH"
 PATH="/usr/local/heroku/bin:/usr/texbin:$PATH"
-PATH="/Applications/Android Studio.app/sdk:$PATH" #Android SDK
+# PATH="/Applications/Android Studio.app/sdk:$PATH" #Android SDK
 
 export ANDROID_HOME="/Applications/Android Studio.app/sdk"
 export GOPATH=$HOME/go
@@ -99,3 +103,12 @@ export PATH=$PATH:$GOPATH/bin
 [ -f /Users/tarjan/.travis/travis.sh ] && source /Users/tarjan/.travis/travis.sh
 
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+
+if [ -e "$HOME/.splice" ]; then
+  source "$HOME/.splice"
+fi
+
+if [ -e "$HOME/perl5/perlbrew/etc/bashrc" ]; then
+  source ~/perl5/perlbrew/etc/bashrc
+fi
+

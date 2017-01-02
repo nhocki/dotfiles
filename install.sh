@@ -20,4 +20,9 @@ for name in *; do
   fi
 done
 
-
+if ! (crontab -l 2>/dev/null | grep -q "brew bundle dump") ; then
+  echo "Adding Brewfile cronjob"
+  (crontab -l 2>/dev/null; echo "0 */300 * * * * brew bundle dump --file=~/src/dotfiles/Brewfile")| crontab -
+else
+  echo "Cron already exists"
+fi

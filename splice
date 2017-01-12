@@ -4,5 +4,5 @@ source $SPLICE/api/config/development/docker-shell.sh
 source $SPLICE/api/test_server.sh
 
 alias spm='splice-api-go test bitbucket.org/splice/api/models'
-
+alias spps='splice-api-go test bitbucket.org/splice/api/components/privateshare/./...'
 

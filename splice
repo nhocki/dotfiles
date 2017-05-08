@@ -6,3 +6,21 @@ source $SPLICE/api/test_server.sh
 alias spm='splice-api-go test bitbucket.org/splice/api/models'
 alias spps='splice-api-go test bitbucket.org/splice/api/components/privateshare/./...'
 
+
+export SPLICE_ENV=staging
+export SPLICE_HELPER_DIR="/Users/tarjan/src/desktop/build/helper/mac/Build/Products/Debug"
+export AASPLICE_HELPER_APP="$SPLICE_HELPER_DIR/Splice Helper.app"
+export SPLICE_DEBUG=1
+export SPLICE_APP_PATH="/Users/tarjan/src/desktop/ui/build/pkg/Splice-darwin-x64/Splice.app"
+export SPLICE_APP_PATH="/Users/tarjan/Desktop/Splice.app"
+
+alias splice-desktop-update="pushd $SPLICE/desktop && git pull && make pull-helper && make clean-ui && pushd ui && yarn package && popd && popd"
+
+function api-test {
+  splice-api-go test "bitbucket.org/splice/api/$@"
+}
+
+if [ -e "$HOME/.splice.private" ]; then
+  source "$HOME/.splice.private"
+fi
+

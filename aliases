@@ -7,6 +7,8 @@ alias l='ls -h'
 
 alias reload!='source ~/.zshrc'
 
+alias caffeine='caffeinate -disu'
+
 alias h='heroku'
 alias b='bundle'
 alias g='git'

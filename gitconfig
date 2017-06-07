@@ -23,6 +23,7 @@
   # For Github-style word diffs
   wordRegex = [^[:space:]]
 [alias]
+  unwip = reset HEAD~1
   msg = commit --allow-empty -m
   st = status -sb
   ci = commit

@@ -41,6 +41,7 @@
   last = log -n 1 --pretty=format:'%h - %s - %cr' --date=relative --abbrev-commit
   unstage = reset HEAD
   pr = !"pr() { git fetch origin pull/$1/head:pr-$1; git checkout pr-$1; }; pr"
+	changed = show --pretty=\"format:\" --name-only
 [apply]
   whitespace = nowarn
 [help]

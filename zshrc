@@ -112,3 +112,5 @@ if [ -e "$HOME/perl5/perlbrew/etc/bashrc" ]; then
   source ~/perl5/perlbrew/etc/bashrc
 fi
 
+eval "$(nodenv init -)"
+export PATH="/usr/local/opt/elasticsearch@2.4/bin:$PATH"

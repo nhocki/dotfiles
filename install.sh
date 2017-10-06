@@ -22,7 +22,7 @@ done
 
 if ! (crontab -l 2>/dev/null | grep -q "brew bundle dump") ; then
   echo "Adding Brewfile cronjob"
-  (crontab -l 2>/dev/null; echo "0 */300 * * * brew bundle dump --file=~/src/dotfiles/Brewfile")| crontab -
+  (crontab -l 2>/dev/null; echo "0 */300 * * * /usr/local/bin/brew bundle dump --file=~/src/dotfiles/Brewfile -f")| crontab -
 else
   echo "Cron already exists"
 fi

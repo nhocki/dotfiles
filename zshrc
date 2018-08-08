@@ -114,3 +114,5 @@ fi
 
 eval "$(nodenv init -)"
 export PATH="/usr/local/opt/elasticsearch@2.4/bin:$PATH"
+
+export GPG_TTY=$(tty)

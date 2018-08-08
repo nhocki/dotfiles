@@ -1,6 +1,7 @@
 [user]
   name = Nicolás Hock Isaza
   email = nhocki@gmail.com
+	signingkey = E06DF687E84EA373
 [color]
   ui = true
 [color "branch"]

@@ -69,7 +69,7 @@ dmip () {
 }
 
 aws-describe-instances() {
-  aws ec2 describe-instances --output table \
+  aws-vault exec splice -- aws ec2 describe-instances --output table \
     --filters "Name=tag:Env,Values=$1" "Name=tag:Name,Values=$2" \
     --query "{\"$2 - $1\":Reservations[*].Instances[*].{InstanceID:InstanceId,PrivateIP:PrivateIpAddress,Status:State.Name}}"
 }

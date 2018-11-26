@@ -1,4 +1,4 @@
-export SPLICE="$GOPATH/src/github.com/splicers"
+export SPLICE="$GOPATH/src/github.com/splice"
 
 if [ -e "$SPLICE/api" ]; then
   source $SPLICE/api/config/development/docker-shell.sh
@@ -7,7 +7,7 @@ fi
 alias splice-desktop-update="pushd $SPLICE/desktop && git pull && make pull-helper && make clean-ui && pushd ui && yarn package && popd && popd"
 
 function api-test {
-  splice-api-go test "github.com/splicers/api/$@"
+  splice-api-go test "github.com/splice/api/$@"
 }
 
 if [ -e "$HOME/.splice.private" ]; then

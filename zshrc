@@ -104,8 +104,8 @@ export PATH=$PATH:$GOPATH/bin
 
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
-if [ -e "$HOME/.splice" ]; then
-  source "$HOME/.splice"
+if [ -e "$HOME/.splicefuncs" ]; then
+  source "$HOME/.splicefuncs"
 fi
 
 if [ -e "$HOME/perl5/perlbrew/etc/bashrc" ]; then

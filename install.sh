@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/zsh
+
+chsh -s /bin/zsh
 
 exclude_files=(README.md install.sh .editorconfig)
 
@@ -26,3 +28,5 @@ if ! (crontab -l 2>/dev/null | grep -q "brew bundle dump") ; then
 else
   echo "Cron already exists"
 fi
+
+echo "Run compaudit | xargs chmod g-w  to fix directory problems"

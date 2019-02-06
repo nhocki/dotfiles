@@ -14,3 +14,4 @@ if [ -e "$HOME/.splice.private" ]; then
   source "$HOME/.splice.private"
 fi
 
+alias terrasplice='aws-vault exec splice -- terraform'

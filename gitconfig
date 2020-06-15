@@ -58,9 +58,9 @@
   autosquash = true
 [mergetool]
   keepBackup = false
-[branch "master"]
+[branch "main"]
   remote = origin
-  merge = refs/heads/master
+  merge = refs/heads/main
 [hub]
 	protocol = https
 [github]

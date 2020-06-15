@@ -1,3 +1,7 @@
+if [ -e "$HOME/.functions/giftwitter" ]; then
+  source "$HOME/.functions/giftwitter"
+fi
+
 if [ -e "$HOME/.functions/z.sh" ]; then
   . "$HOME/.functions/z.sh"
   function precmd () {
@@ -45,33 +49,28 @@ function rake {
   fi
 }
 
-function oldpr() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null)
-  if [[ -n $ref ]]; then
-    echo `git pull-request -h $1:${ref#refs/heads/}`
-  fi
-}
-
-use () {
-  if [[ $1 == "mac" ]]; then
-    unset DOCKER_TLS_VERIFY
-    unset DOCKER_CERT_PATH
-    unset DOCKER_MACHINE_NAME
-    unset DOCKER_HOST
-  else
-    eval "$(docker-machine env $1)"
-  fi
-}
-
-dmip () {
-  active=`docker-machine active`
-  docker-machine ip ${1:-$active}
-}
-
 aws-describe-instances() {
   aws-vault exec splice -- aws ec2 describe-instances --output table --filters "Name=tag:Env,Values=$1" "Name=tag:Name,Values=$2" --query "{\"$2 - $1\":Reservations[*].Instances[*].{InstanceID:InstanceId,PrivateIP:PrivateIpAddress,NameTag:Tags[?Key==\`NodeName\`]|[0].Value,Status:State.Name}}"
 }
 
-ec2-staging() { aws-describe-instances staging ${1:-hybrid api} }
-ec2-production() { aws-describe-instances production ${1:-hybrid api} }
-ec2() { aws-describe-instances "*" ${1:-hybrid api} }
+ec2-staging() { aws-describe-instances staging "${1:-hybrid api}"; }
+ec2-production() { aws-describe-instances production "${1:-hybrid api}"; }
+ec2() { aws-describe-instances "*" "${1:-hybrid api}"; }
+
+gitbranch() {
+  if [ "$(git branch | grep -c master)" -eq 1 ] ; then
+    echo "master"
+  elif [ "$(git branch | grep -c main)" -ge 1 ]; then
+    echo "main"
+  else
+    echo "staging"
+  fi
+}
+
+
+gclean() {
+  local branch;
+  branch=$(gitbranch)
+  echo "Cleaning branches merged against: $branch"
+  git branch --merge "$branch" | grep -v "$branch" | grep -v "*" | xargs git branch -d
+}

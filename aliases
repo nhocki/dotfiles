@@ -15,7 +15,6 @@ alias g='git'
 alias rrspec='git status -sb | grep spec | cut -f 2 -d M  | xargs bundle exec rspec'
 
 alias pr="hub pull-request"
-alias git="hub"
 alias gf="git flow"
 alias gb="git branch"
 alias gc="git commit"

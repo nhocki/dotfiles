@@ -74,9 +74,7 @@ if [ -e "$HOME/.functions/functions" ]; then
   source "$HOME/.functions/functions"
 fi
 
-# RVM
 setopt nullglob
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 if [ -e "$HOME/.zshenv" ]; then
   source "$HOME/.zshenv"
@@ -87,32 +85,25 @@ if [ -e "$HOME/.prompt" ]; then
   source "$HOME/.prompt"
 fi
 
-# export EDITOR="~/bin/subl -n"
-
 # PATH stuff
 export PATH="$HOME/.rbenv/shims:$HOME/bin:/usr/local/bin:/usr/local/share/python:$PATH"
 export PATH="$HOME/.cask/bin:$PATH"
-PATH="/usr/local/heroku/bin:/usr/texbin:$PATH"
-# PATH="/Applications/Android Studio.app/sdk:$PATH" #Android SDK
+PATH="/usr/local/bin:/usr/local/heroku/bin:/usr/texbin:$PATH"
 
-export ANDROID_HOME="/Applications/Android Studio.app/sdk"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-# added by travis gem
-[ -f /Users/tarjan/.travis/travis.sh ] && source /Users/tarjan/.travis/travis.sh
-
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
-
 if [ -e "$HOME/.splicefuncs" ]; then
   source "$HOME/.splicefuncs"
-fi
-
-if [ -e "$HOME/perl5/perlbrew/etc/bashrc" ]; then
-  source ~/perl5/perlbrew/etc/bashrc
 fi
 
 eval "$(nodenv init -)"
 export PATH="/usr/local/opt/elasticsearch@2.4/bin:$PATH"
 
 export GPG_TTY=$(tty)
+
+if [ -e "/usr/local/opt/asdf/asdf.sh" ]; then
+. /usr/local/opt/asdf/asdf.sh
+fi
+
+export HOMEBREW_NO_AUTO_UPDATE=1

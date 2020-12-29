@@ -70,9 +70,3 @@
 [heroku]
 	account = ride
 
-[credential]
-helper = /opt/boxen/bin/boxen-git-credential
-[url "git@bitbucket.org:"]
-	insteadOf = https://bitbucket.org/
-[url "git@github.com:"]
-	insteadOf = https://github.com/

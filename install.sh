@@ -29,4 +29,9 @@ else
   echo "Cron already exists"
 fi
 
+echo "Installing Vundle"
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+
 echo "Run compaudit | xargs chmod g-w  to fix directory problems"

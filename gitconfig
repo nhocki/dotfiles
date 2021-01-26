@@ -51,9 +51,7 @@
   submodule = 1
 [core]
   excludesfile =  /Users/tarjan/.gitignore
-  excludesfile = /opt/boxen/config/git/gitignore
   autocrlf = false
-  # editor = subl -n -w
 [rebase]
   autosquash = true
 [mergetool]
@@ -67,6 +65,4 @@
   user = nhocki
 [merge]
   tool = opendiff
-[heroku]
-	account = ride
 

@@ -12,6 +12,7 @@ alias caffeine='caffeinate -disu'
 alias h='heroku'
 alias b='bundle'
 alias g='git'
+alias o='overmind'
 alias rrspec='git status -sb | grep spec | cut -f 2 -d M  | xargs bundle exec rspec'
 
 alias pr="hub pull-request"
@@ -30,27 +31,9 @@ alias gco="git checkout"
 alias gba="git branch -a"
 alias gca="git commit --amend --no-edit"
 alias gadd="git add"
-alias gitk='gitk --all'
 alias gpr='git push && hub pull-request'
 alias comcount='git shortlog -sn'
 alias gitfiles='git diff-tree --no-commit-id --name-only -r'
-
-alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias pgstop='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop'
-
-alias c='cd ~/code/'
-alias u='cd ~/university/current/'
-alias zin='cd ~/zinergia/'
-
-# Removes all the ugly files
-alias rmb='echo -n "Really clean this directory? [y/n] ";
-read yorn;
-if test "$yorn" = "y"; then
-  rm -f \#* *~ .*~;
-  echo "Cleaned";
-else
-  echo "Not Cleaned";
-fi'
 
 alias t=tmux
 alias ta='tmux a -t'
@@ -63,7 +46,6 @@ alias octal='stat -f"%Lp --> %N"'
 # Docker
 alias d='docker'
 alias dc='docker-compose'
-alias dm='docker-machine'
 
 # Mac stuff
 alias show_dot_files='defaults write com.apple.finder AppleShowAllFiles TRUE'
@@ -72,9 +54,6 @@ alias turn_animation_off='defaults write com.apple.dock workspaces-swoosh-animat
 alias turn_animation_on='defaults write com.apple.dock workspaces-swoosh-animation-off -bool NO && killall Dock'
 alias show_spotlight_icon='sudo chmod 755 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search && killall SystemUIServer'
 alias hide_spotlight_icon='sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search && killall SystemUIServer'
-
-# Ride Aliases
-alias t2='docker-compose -f ~/src/docker-ride/trackii.yml'
 
 # Prettyfy JSON from clipboard
 alias jsonpp='pbpaste | json_pp | pbcopy'
